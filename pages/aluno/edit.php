@@ -97,7 +97,7 @@ if(isset($_POST['atualizar'])){
     $data_nascimento = $_POST['data_nascimento'];
     $situação = $_POST['situacao'];
 
-    $sqlUpdate = 'UPDATE cadastro SET nome = :nome, email = :email WHERE id = :id';
+    $sqlUpdate = 'UPDATE aluno SET nome = :nome, email = :email WHERE id = :id';
 
     try{
         // Variavel "update" abaixo é um exemplo.
@@ -139,7 +139,7 @@ if(isset($_POST['atualizar'])){
 if(isset($_GET['action']) && $_GET['action'] == 'delete'){
     $id = (int)$_GET['id'];
 
-    $sqlDelete = 'DELETE FROM cadastro WHERE id = :id';
+    $sqlDelete = 'DELETE FROM aluno WHERE id = :id';
 
     try{
         // Variavel "delete" abaixo é um exemplo.
